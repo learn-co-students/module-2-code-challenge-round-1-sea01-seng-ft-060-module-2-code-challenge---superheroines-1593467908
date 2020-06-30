@@ -1,0 +1,6 @@
+<%= form_for @heroine do |f| %>
+    Name: <%= f.text_field :name %><br>
+    Super Name: <%= f.text_field :super_name %><br>
+    <%= f.collection_select(:heroine_power_ids, Power.all, :id, :name) %><br>
+    <%= f.submit %><br>
+<% end %>
