@@ -1,0 +1,8 @@
+<%= form_for @heroine do |f| %>  
+<% if @heroine.errors.any? %>
+<%= @heroine.errors.full_messages %><br>
+<% end %>
+  Name: <%= f.text_field :name %> <br>
+  Super Name: <%= f.text_field :super_name %> <br>
+  <%= f.submit%> <br>
+<% end %>
