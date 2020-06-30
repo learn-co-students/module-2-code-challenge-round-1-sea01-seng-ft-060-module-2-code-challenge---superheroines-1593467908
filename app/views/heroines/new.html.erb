@@ -1,0 +1,15 @@
+<h1>Heroine New</h1>
+
+<%= form_for @heroine do |f| %>
+ 
+    <%= f.label "Name: " %>
+    <%= f.text_field :name %> <br><br>
+    
+    <%= f.label "Super Hero Name: " %>
+    <%= f.text_field :super_name %><br><br>
+    
+    Power: <%= f.collection_select(:power_ids, Power.all, :name, :name)%>
+
+    <%= f.submit %>
+<% end %> 
+
